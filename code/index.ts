@@ -51,3 +51,13 @@
 // }
 
 // console.log(result(add(6, 3)));
+
+//objetos
+const user =  {
+    firstName: 'Andre',
+    lastName: 'Girotto',
+    age: 33
+}
+
+user.age = 9;
+console.log(user);

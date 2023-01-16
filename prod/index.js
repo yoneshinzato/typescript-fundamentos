@@ -30,11 +30,19 @@
 // }
 // console.log(user);
 //ts identifica os parametros e consequentemente identifica também o return
-function add(num1, num2) {
-    return num1 + num2;
-}
+// function add(num1: number, num2: number): number {
+//     return num1 + num2;
+// }
 //void - se não retorna nada, armazena um undefined. o resultado da função não está retornando
-function result(price) {
-    console.log('The result is ' + price);
-}
-console.log(result(add(6, 3)));
+// function result(price: number) {
+//     console.log('The result is ' + price);
+// }
+// console.log(result(add(6, 3)));
+//objetos
+const user = {
+    firstName: 'Andre',
+    lastName: 'Girotto',
+    age: 33
+};
+user.age = 9;
+console.log(user);
