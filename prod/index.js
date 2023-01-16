@@ -39,10 +39,27 @@
 // }
 // console.log(result(add(6, 3)));
 //objetos
-const user = {
-    firstName: 'Andre',
-    lastName: 'Girotto',
-    age: 33
-};
-user.age = 9;
-console.log(user);
+// const user =  {
+//     firstName: 'Andre',
+//     lastName: 'Girotto',
+//     age: 33
+// }
+// user.age = 9;
+// console.log(user);
+//unknown - pode ser qualquer coisa, mas de forma 'temporária'
+// let itemImput: unknown;
+// let itemName: string;
+// itemImput = 10;
+// itemImput = 'rocks';
+// if(itemImput === 'string') {
+//     itemName = itemImput
+// }
+//never
+function generateError(msg, code) {
+    throw {
+        msg: msg,
+        errorCode: code
+    };
+}
+generateError('Socorro!', 911);
+console.log(generateError('Socorro!', 911));

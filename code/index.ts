@@ -71,3 +71,13 @@
 // if(itemImput === 'string') {
 //     itemName = itemImput
 // }
+
+//never - não passa informação para a aplicação. never não retorna nada na console. tem algum problema na aplicação
+// function generateError(msg: string, code: number): never {
+//     throw {
+//         msg: msg,
+//         errorCode: code
+//     }
+// }
+// generateError('Socorro!', 911);
+// console.log(generateError('Socorro!', 911));
