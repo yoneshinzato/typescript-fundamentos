@@ -81,3 +81,17 @@
 // }
 // generateError('Socorro!', 911);
 // console.log(generateError('Socorro!', 911));
+
+
+//type alias - pseudônimo user usa Users, que são os types que precisamos
+//usando types coloca as properties pra ser usadas em outras constantes
+type Users = {
+    firstName: string
+    age: number
+}
+const user: Users =  {
+    firstName: 'Andre',
+    age: 33
+}
+
+console.log(user);
