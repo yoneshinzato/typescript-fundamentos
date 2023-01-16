@@ -121,5 +121,26 @@
 // productName = 'Pear'
 // productName = 'Banana'
 
+//intersection - combinar dois objetos ou duas aliases
+// type User = {
+//     firstName: string
+//     age: number
+// }
+
+// type JobRole = {
+//     id: number
+//     role: string
+// }
+
+// type employee = User & JobRole
+// const employee1: employee = {
+//     firstName: 'John',
+//     age: 45,
+//     id: 22,
+//     role: 'Managing Director'
+
+// }
+// console.log(employee1);
+
 
 
