@@ -85,13 +85,31 @@
 
 //type alias - pseudônimo user usa Users, que são os types que precisamos
 //usando types coloca as properties pra ser usadas em outras constantes
-type Users = {
-    firstName: string
-    age: number
-}
-const user: Users =  {
-    firstName: 'Andre',
-    age: 33
+// type Users = {
+//     firstName: string
+//     age: number
+// }
+// const user: Users =  {
+//     firstName: 'Andre',
+//     age: 33
+// }
+
+// console.log(user);
+
+//union types pode armazenar dois tipos
+function userInput(input1: number | string, input2: number | string) {
+    let result
+    if(typeof input1 === 'number' && typeof input2 === 'number') {
+        result = input1 + input2
+    } else {
+        result = input1.toString() + ' ' +  input2.toString()
+    }
+    return result
 }
 
-console.log(user);
+const combinePrices = userInput(10, 20);
+console.log(combinePrices);
+
+const combineName = userInput('Apple', 'Avaocado');
+console.log(combineName);
+
