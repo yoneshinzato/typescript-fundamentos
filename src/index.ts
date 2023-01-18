@@ -148,7 +148,7 @@
 
 // code = a;
 
-function productPrice(price: number) {
-    let productName = 'Apple'
-    console.log(price);
-}
+// function productPrice(price: number) {
+//     let productName = 'Apple'
+//     console.log(price);
+// }
