@@ -111,3 +111,5 @@
 //     role: 'Managing Director'
 // }
 // console.log(employee1);
+let code = 20;
+console.log(code);

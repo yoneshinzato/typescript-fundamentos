@@ -143,4 +143,6 @@
 // console.log(employee1);
 
 
+let code: number = 20
+console.log(code);
 
