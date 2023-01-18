@@ -143,7 +143,12 @@
 // console.log(employee1);
 
 
-let code: number = 29
-console.log(code);
+// let code: number = 29
+// console.log(code);
 
-code = a;
+// code = a;
+
+function productPrice(price: number) {
+    let productName = 'Apple'
+    console.log(price);
+}
