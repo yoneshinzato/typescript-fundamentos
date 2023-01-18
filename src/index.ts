@@ -146,3 +146,4 @@
 let code: number = 29
 console.log(code);
 
+code = a;
