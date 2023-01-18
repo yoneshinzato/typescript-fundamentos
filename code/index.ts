@@ -143,6 +143,6 @@
 // console.log(employee1);
 
 
-let code: number = 20
+let code: number = 29
 console.log(code);
 
