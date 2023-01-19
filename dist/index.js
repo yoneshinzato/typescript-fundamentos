@@ -111,5 +111,23 @@
 //     role: 'Managing Director'
 // }
 // console.log(employee1);
-let code = 29;
-console.log(code);
+// let code: number = 29
+// console.log(code);
+// code = a;
+// function productPrice(price: number, currency: string) {
+//     if(price > 20) {
+//         return price
+//     }
+//     return
+// }
+// classes
+class Users {
+    constructor(n, b) {
+        this.name = n;
+        this.balance = b;
+    }
+}
+const user1 = new Users('Robert', 10);
+const user2 = new Users('Patrick', 33);
+console.log(user1);
+console.log(user2);
