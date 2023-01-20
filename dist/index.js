@@ -123,14 +123,21 @@
 // classes
 class Users {
     constructor(n, b) {
+        this.balance = 0;
+        this.singleTransactions = 0;
         this.name = n;
         this.balance = b;
     }
     addMoney(amount) {
         this.balance += amount;
+        this.singleTransactions++;
+        Users.totalTransactions++;
     }
 }
+Users.totalTransactions = 0;
+//private properties ou methods: não podem ser utilizadas FORA da classe
 const user1 = new Users('Robert', 10);
+user1.balance = 500;
 user1.addMoney(100);
 const user2 = new Users('Patrick', 20);
 user2.addMoney(30);

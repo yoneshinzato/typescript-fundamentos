@@ -158,7 +158,9 @@
 // classes
 class Users {
     name: string
-    balance: number
+    balance: number = 0
+    singleTransactions: number = 0
+    static totalTransactions: number = 0
 
     constructor(n: string, b: number) {
         this.name = n
@@ -167,10 +169,14 @@ class Users {
 
     addMoney(amount: number) {
         this.balance += amount
+        this.singleTransactions++
+        Users.totalTransactions++
     }
 }
 
+//private properties ou methods: não podem ser utilizadas FORA da classe
 const user1 = new Users('Robert', 10);
+user1.balance = 500
 user1.addMoney(100)
 const user2 = new Users('Patrick', 20)
 user2.addMoney(30)
