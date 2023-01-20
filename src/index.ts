@@ -156,29 +156,48 @@
 // }
 
 // classes
-class Users {
+// class Users {
+//     name: string
+//     balance: number = 0
+//     singleTransactions: number = 0
+//     static totalTransactions: number = 0
+
+//     constructor(n: string, b: number) {
+//         this.name = n
+//         this.balance = b
+//     }
+
+//     addMoney(amount: number) {
+//         this.balance += amount
+//         this.singleTransactions++
+//         Users.totalTransactions++
+//     }
+// }
+
+//private properties ou methods: não podem ser utilizadas FORA da classe
+// const user1 = new Users('Robert', 10);
+// user1.balance = 500
+// user1.addMoney(100)
+// const user2 = new Users('Patrick', 20)
+// user2.addMoney(30)
+// console.log(user1);
+// console.log(user2);
+
+//interfaces
+interface Item {
     name: string
-    balance: number = 0
-    singleTransactions: number = 0
-    static totalTransactions: number = 0
+    price: number
 
-    constructor(n: string, b: number) {
-        this.name = n
-        this.balance = b
-    }
+    itemPurchased(msg: string): void 
+    
+}
 
-    addMoney(amount: number) {
-        this.balance += amount
-        this.singleTransactions++
-        Users.totalTransactions++
+let product1: Item = {
+    name: 'Apple',
+    price: 2,
+    itemPurchased(msg: string): void {
+        console.log(msg + this.name)
     }
 }
 
-//private properties ou methods: não podem ser utilizadas FORA da classe
-const user1 = new Users('Robert', 10);
-user1.balance = 500
-user1.addMoney(100)
-const user2 = new Users('Patrick', 20)
-user2.addMoney(30)
-console.log(user1);
-console.log(user2);
+product1.itemPurchased('You just bought a ' + name)
