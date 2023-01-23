@@ -190,18 +190,44 @@
 // room.A17 = 'Walt Disney'
 // console.log(room);
 //type inheritance criar classes e utilizar propriedades de uma com a outra
+// class Person {
+//     constructor(public firstName: string, public lastName: string, public age: number) {}
+//     greet() {
+//         console.log(`Hi!`);   
+//     }
+// }
+// //cliente do banco
+// class Clients extends Person {
+//     balance() {
+//         console.log("Your  balance is $100");  
+//     }
+// }
+// let client1 = new Clients("Yone", "Shinzato", 33)
+// console.log(client1);
+// client1.greet()
+//overriding
 class Person {
     constructor(firstName, lastName, age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
     }
-    greet() {
-        console.log(`Hi!`);
+    get greet() {
+        return this.firstName + ' ' + this.lastName;
     }
 }
-//cliente do banco
 class Clients extends Person {
+    get greet() {
+        return 'Dear ' + super.greet;
+    }
 }
-let client1 = new Clients("Yone", "Shinzato", 33);
-console.log(client1);
+//funcionário do banco
+class Staff extends Person {
+    get greet() {
+        return 'Hi,  ' + super.greet;
+    }
+}
+let client1 = new Clients('Walt', 'Disney', 66);
+let staff = new Staff('Maria', 'Souza', 33);
+console.log(client1.greet);
+console.log(staff.greet);

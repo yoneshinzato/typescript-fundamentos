@@ -264,3 +264,32 @@
 // let client1 = new Clients("Yone", "Shinzato", 33)
 // console.log(client1);
 // client1.greet()
+
+//overriding
+
+// class Person {
+//     constructor(public firstName: string, public lastName: string, public age: number) {}
+//     get greet() {
+//         return this.firstName + ' ' + this.lastName
+//     }
+// }
+
+// class Clients extends Person {
+//     override get greet() {
+//         return 'Dear ' + super.greet
+//     }
+// }
+
+//funcionário do banco
+// class Staff extends Person {
+//     override get greet() {
+//         return 'Hi,  ' + super.greet
+//     }
+// }
+
+// let client1 = new Clients('Walt', 'Disney', 66)
+// let staff = new Staff('Maria', 'Souza', 33)
+
+// console.log(client1.greet);
+// console.log(staff.greet);
+
