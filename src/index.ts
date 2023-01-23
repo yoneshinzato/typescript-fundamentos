@@ -234,14 +234,33 @@
 
 //index signatures
 
-class HotelRooms {
-    [roomNumber: string]: string
-}
+// class HotelRooms {
+//     [roomNumber: string]: string
+// }
 
-let room = new HotelRooms()
+// let room = new HotelRooms()
 
-room.A201 = 'Mickey'
-room.A202 = 'Daisy'
-room.A17 = 'Walt Disney'
+// room.A201 = 'Mickey'
+// room.A202 = 'Daisy'
+// room.A17 = 'Walt Disney'
 
-console.log(room);
+// console.log(room);
+
+//type inheritance criar classes e utilizar propriedades de uma com a outra
+// class Person {
+//     constructor(public firstName: string, public lastName: string, public age: number) {}
+//     greet() {
+//         console.log(`Hi!`);   
+//     }
+// }
+
+// //cliente do banco
+// class Clients extends Person {
+//     balance() {
+//         console.log("Your  balance is $100");  
+//     }
+// }
+
+// let client1 = new Clients("Yone", "Shinzato", 33)
+// console.log(client1);
+// client1.greet()

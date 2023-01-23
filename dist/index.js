@@ -181,10 +181,27 @@
 // let movie1 = new Movies(1, 'La La Land', 20)
 // console.log(movie1);
 //index signatures
-class HotelRooms {
+// class HotelRooms {
+//     [roomNumber: string]: string
+// }
+// let room = new HotelRooms()
+// room.A201 = 'Mickey'
+// room.A202 = 'Daisy'
+// room.A17 = 'Walt Disney'
+// console.log(room);
+//type inheritance criar classes e utilizar propriedades de uma com a outra
+class Person {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+    greet() {
+        console.log(`Hi!`);
+    }
 }
-let room = new HotelRooms();
-room.A201 = 'Mickey';
-room.A202 = 'Daisy';
-room.A17 = 'Walt Disney';
-console.log(room);
+//cliente do banco
+class Clients extends Person {
+}
+let client1 = new Clients("Yone", "Shinzato", 33);
+console.log(client1);
