@@ -184,20 +184,38 @@
 // console.log(user2);
 
 //interfaces
-interface Item {
-    name: string
-    price: number
+// interface Item {
+//     name: string
+//     price: number
 
-    itemPurchased(msg: string): void 
+//     itemPurchased(msg: string): void 
     
-}
+// }
 
-let product1: Item = {
-    name: 'Apple',
-    price: 2,
-    itemPurchased(msg: string): void {
-        console.log(msg + this.name)
-    }
-}
+// let product1: Item = {
+//     name: 'Apple',
+//     price: 2,
+//     itemPurchased(msg: string): void {
+//         console.log(msg + this.name)
+//     }
+// }
 
-product1.itemPurchased('You just bought a ' + name)
+// product1.itemPurchased('You just bought a ' + name)
+
+//diferença de private e readonly
+//readonly acessa a property, mas não pode mudar e dá pra acessar
+//quando está private não dá nem pra acessar
+// class Movies {
+//     readonly id: number
+//     name: string
+
+//     constructor(id: number, name: string){
+//         this.id = id
+//         this.name = name
+//     }
+// }
+
+// let movie1 = new Movies(1, 'La La Land')
+// movie1.id = 5
+
+// console.log(movie1);

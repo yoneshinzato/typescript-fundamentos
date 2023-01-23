@@ -48,3 +48,91 @@
 // const allMyArrays: (string | number)[][] = [sequence, animals, stringsAndNumbers];
 
 // console.log(allMyArrays);
+
+//day 5 ex 1
+
+// interface CartItem {
+//     id: number,
+//     title: string,
+//     variantId?: number
+// }
+
+// function addCartItem(item: CartItem) {
+//     console.log(`Adding "${item.title}" to cart.`);
+    
+// }
+
+// addCartItem({id: 1, title: 'shoes'})
+
+//day 5 ex 2
+
+// class Person {
+//     name: string;
+//     age: number;
+//         constructor(name: string, age: number) {
+//             this.name = name
+//             this.age = age
+//         }
+// }
+
+// class Jane extends Person {
+//     constructor(name: string, age: number) {
+//         super(name, age)
+//     }
+
+// }
+
+// interface Person {
+//     name: string
+//     age: number
+// }
+
+// class Person implements Person {
+//     constructor(name: string, age: number){}
+// }
+
+// let jane = new Person('Jane', 31);
+
+// console.log(`${jane.name} is ${jane.age} years old`);
+
+
+//day 5 ex 3
+// class MC {
+//     greet(event: string = 'party'): string {
+//         return `Welcome to the ${event}`
+//     }
+// }
+// const mc = new MC()
+// console.log(mc.greet('show'));
+
+//day 5 ex 4
+
+// interface Empregado {
+//     title: string
+//     salary: number
+// }
+
+// class Employee implements Empregado {
+//     constructor(public title: string, public salary: number){}
+// }
+
+// let emp = new Employee("Software Engineer", 100000)
+
+// console.log(`The new employee's title is ${emp.title} and he earns $ ${emp.salary}`);
+
+// day 5 ex 5 readonly não deixa que a propriedade seja alterada
+// interface UserSchema {
+//     id: number
+//     name: string
+// }
+
+// class User implements UserSchema {
+//     constructor(readonly id: number, public name: string) {}
+// }
+
+// const user = new User(1, 'Dog')
+// console.log(user.id);
+
+// user.name = 'Harold'
+// user.id = 5
+// console.log(`User: `, user);
