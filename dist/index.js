@@ -158,11 +158,33 @@
 //     }
 // }
 // product1.itemPurchased('You just bought a ' + name)
-class Movies {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-    }
+//diferença de private e readonly
+//readonly acessa a property, mas não pode mudar e dá pra acessar
+//quando está private não dá nem pra acessar
+// class Movies {
+//     readonly id: number
+//     name: string
+//     constructor(id: number, name: string){
+//         this.id = id
+//         this.name = name
+//     }
+// }
+// let movie1 = new Movies(1, 'La La Land')
+// movie1.id = 5
+// console.log(movie1);
+// class Movies {
+//     constructor(
+//         public readonly id: number, 
+//         public name: string, 
+//         private _price: number){}
+// }
+// let movie1 = new Movies(1, 'La La Land', 20)
+// console.log(movie1);
+//index signatures
+class HotelRooms {
 }
-let movie1 = new Movies(1, 'La La Land');
-console.log(movie1);
+let room = new HotelRooms();
+room.A201 = 'Mickey';
+room.A202 = 'Daisy';
+room.A17 = 'Walt Disney';
+console.log(room);

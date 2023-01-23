@@ -220,14 +220,28 @@
 
 // console.log(movie1);
 
-class Movies {
+// class Movies {
 
-    constructor(
-        public readonly id: number, 
-        public name: string, 
-        private _price: number){}
+//     constructor(
+//         public readonly id: number, 
+//         public name: string, 
+//         private _price: number){}
+// }
+
+// let movie1 = new Movies(1, 'La La Land', 20)
+
+// console.log(movie1);
+
+//index signatures
+
+class HotelRooms {
+    [roomNumber: string]: string
 }
 
-let movie1 = new Movies(1, 'La La Land', 20)
+let room = new HotelRooms()
 
-console.log(movie1);
+room.A201 = 'Mickey'
+room.A202 = 'Daisy'
+room.A17 = 'Walt Disney'
+
+console.log(room);
