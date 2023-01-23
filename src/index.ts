@@ -219,3 +219,15 @@
 // movie1.id = 5
 
 // console.log(movie1);
+
+class Movies {
+
+    constructor(
+        public readonly id: number, 
+        public name: string, 
+        private _price: number){}
+}
+
+let movie1 = new Movies(1, 'La La Land', 20)
+
+console.log(movie1);
