@@ -104,3 +104,95 @@
 // user.name = 'Harold'
 // user.id = 5
 // console.log(`User: `, user);
+//day 7 ex 1
+// interface User {
+//     name: string;
+//     age: number;
+//     occupation: string;
+// }
+// interface Admin {
+//     name: string;
+//     age: number;
+//     role: string;
+// }
+// type Person = User | Admin;
+// const persons: Person[] = [
+//     {
+//         name: 'Max Russel',
+//         age: 25,
+//         occupation: 'QA Lead'
+//     },
+//     {
+//         name: 'Maria Dev',
+//         age: 21,
+//         role: 'Technical Lead'
+//     },
+//     {
+//         name: 'Jane Doe',
+//         age: 29,
+//         occupation: 'Scrum Master'
+//     },
+//     {
+//         name: 'John Downey',
+//         age: 44,
+//         role: 'CTO'
+//     },
+// ]
+// function logPerson(person: Person) {
+//     let additionalInformation: string;
+//     if('role' in person) {
+//         additionalInformation = person.role
+//     } else {
+//         additionalInformation = person.occupation
+//     }
+//     console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
+// }
+// persons.forEach(logPerson)
+// Day 7 - Exercise 2
+// class Animal {
+//     constructor(public name: string) {}
+//     move(meters: number) {
+//       console.log(`${this.name} moved ${meters}m.`)
+//     }
+//   }
+//   class Snake extends Animal {
+//     move(meters: number = 5) {
+//       console.log('Slithering...')
+//       super.move(meters)
+//     }
+//   }
+//   class Pony extends Animal {
+//     move(meters: number) {
+//       console.log('Galloping...')
+//       super.move(meters)
+//     }
+//   }
+//   const sammy = new Snake("Sammy the Snake")
+//   sammy.move()
+//   const pokey = new Pony("Pokey the Pony")
+//   pokey.move(34)
+// Day 7 - Exercise 3
+class Furniture {
+    constructor(_manufacturer = 'IKEA') {
+        this._manufacturer = _manufacturer;
+    }
+    getManufacturer() {
+        return this._manufacturer;
+    }
+}
+class Desk extends Furniture {
+    kind() {
+        console.log(`This is a desk made by ${this.getManufacturer()}`);
+    }
+}
+class Chair extends Furniture {
+    kind() {
+        console.log(`This is a chair made by ${this.getManufacturer()}`);
+    }
+}
+const desk = new Desk();
+desk.kind();
+desk.getManufacturer; // Deve retornar um erro
+const chair = new Chair();
+chair.kind();
+chair.getManufacturer; // Deve retornar um erro
