@@ -172,27 +172,35 @@
 //   const pokey = new Pony("Pokey the Pony")
 //   pokey.move(34)
 // Day 7 - Exercise 3
-class Furniture {
-    constructor(_manufacturer = 'IKEA') {
-        this._manufacturer = _manufacturer;
-    }
-    getManufacturer() {
-        return this._manufacturer;
-    }
-}
-class Desk extends Furniture {
-    kind() {
-        console.log(`This is a desk made by ${this.getManufacturer()}`);
-    }
-}
-class Chair extends Furniture {
-    kind() {
-        console.log(`This is a chair made by ${this.getManufacturer()}`);
-    }
-}
-const desk = new Desk();
-desk.kind();
-desk.getManufacturer; // Deve retornar um erro
-const chair = new Chair();
-chair.kind();
-chair.getManufacturer; // Deve retornar um erro
+// class Furniture {
+//     constructor(private _manufacturer: string = 'IKEA') {}
+//     getManufacturer(): string {
+//         return this._manufacturer
+//     }
+//   }
+//   class Desk extends Furniture {
+//     kind() {
+//       console.log(`This is a desk made by ${this.getManufacturer()}`)
+//     }
+//   }
+//   class Chair extends Furniture {
+//     kind() {
+//       console.log(`This is a chair made by ${this.getManufacturer()}`)
+//     }
+//   }
+//   const desk = new Desk()
+//   desk.kind()
+//   desk.getManufacturer // Deve retornar um erro
+//   const chair = new Chair()
+//   chair.kind()
+//   chair.getManufacturer // Deve retornar um erro
+// Day 7 - Exercise 4
+let multiply;
+let capitalize;
+capitalize = function (value) {
+    return `${value.charAt(0).toUpperCase()}${value.slice(1)}`;
+};
+multiply = function (x, y) {
+    return x * y;
+};
+console.log(capitalize(`nifty ${multiply(5, 10)}`));
